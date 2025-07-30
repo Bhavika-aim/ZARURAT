@@ -1,0 +1,30 @@
+// src/context/AuthContext.jsx
+import React, { useEffect, useState, createContext, useContext } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from "../firebase";
+
+const AuthContext = createContext();
+
+export const AuthProvider = ({ children }) => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [isVolunteer, setIsVolunteer] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+      setIsVolunteer(user?.email?.endsWith("@jecrc.ac.in") || false);
+      setLoading(false);
+    });
+
+    return () => unsubscribe();
+  }, []);
+
+  return (
+    <AuthContext.Provider value={{ currentUser, isVolunteer }}>
+      {!loading && children}
+    </AuthContext.Provider>
+  );
+};
+
+export const useAuth = () => useContext(AuthContext);

@@ -39,17 +39,17 @@ const handleLogin = async (e) => {
       return;
     }
 
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      localStorage.setItem("userType", "volunteer");
-      navigate("/volunteer-dashboard");
-    } catch (error) {
-      if (error.code === "auth/user-not-found") {
-        setErrorMsg("Volunteer not found in Firebase Auth.");
-      } else {
-        setErrorMsg("Login failed: " + error.message);
-      }
-    }
+ try {
+  const firebaseUser = await signInWithEmailAndPassword(auth, email, password);
+  localStorage.setItem("userType", "volunteer");
+  localStorage.setItem("volunteerEmail", email);
+  navigate("/volunteer-dashboard");
+} catch (error) {
+  console.error("Firebase Sign-In Error:", error.message);
+  setErrorMsg("Login failed: " + error.message);
+}
+
+
   } else {
     setErrorMsg("Use Google Sign-In for non-volunteer login.");
   }

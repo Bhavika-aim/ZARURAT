@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Zarurat
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Zarurat Logo](src/assets/zarurat-logo.jpg)
 
-## Available Scripts
+**Zarurat** is a non-profit initiative founded by students of JECRC Foundation, Jaipur, aiming to teach and mentor underprivileged children. This platform facilitates volunteering, donations, and showcases the organization's impact and events.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [About](#about)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Setup](#setup)
+- [Environment Variables](#environment-variables)
+- [Folder Structure](#folder-structure)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## About
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Zarurat conducts educational and recreational activities for children in need. Major events include:
 
-### `npm run build`
+- **Joy of Giving Week:** 7-day community event in October
+- **Celebrating Innocence:** Full-day gala with storytelling, carnival, and special guests
+- **Regular Classes & Workshops:** Monday to Saturday, 4:00–5:30 PM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Achievements include entries in the **Rajasthan Book of Records (2019)** and **Limca Book of Records (Origami)**.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Features
 
-### `npm run eject`
+- Volunteer Registration & Login (restricted to JECRC emails)
+- Google Sign-In for general users
+- Volunteer Dashboard: Add/Edit student data class-wise
+- Admin Dashboard: Manage all students and volunteers
+- Donation page with Razorpay integration
+- Contact form with EmailJS & Firestore storage
+- Dynamic event and impact pages
+- Professional UI/UX with Tailwind CSS
+- Fully responsive layout
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Frontend:** React.js, Tailwind CSS
+- **Backend / Auth:** Firebase Authentication, Firestore
+- **Payment Integration:** Razorpay
+- **Email Service:** EmailJS
+- **Build Tools:** Vite
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clone the repository:
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/Zarurat.git
+cd Zarurat/client
